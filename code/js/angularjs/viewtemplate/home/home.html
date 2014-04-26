@@ -1,0 +1,152 @@
+ 
+  
+    
+   
+       
+        
+        
+      
+      
+          <section class="hbox stretch" ng-controller="mainController">
+              <!-- .aside -->
+              <aside class="aside-xl b-l b-r" id="note-list">
+                <section class="vbox flex">
+                  <header class="header clearfix" >
+                    <span class="pull-right m-t">
+						<button  class="btn btn-dark btn-sm btn-icon"  data-toggle="tooltip" data-placement="right" title="Pri." ng-click="browseprev()"  value="" id="add">
+						<i class="fa fa-caret-square-o-left" ></i></button>
+						<button  class="btn btn-dark btn-sm btn-icon"  data-toggle="tooltip" data-placement="right" title="Next"  ng-click="browsenext()" value="" id="add">
+						<i class="fa fa-caret-square-o-right" ></i></button>
+						 
+						<button class="btn btn-dark btn-sm btn-icon"  data-toggle="tooltip" data-placement="right" title="New" ng-click="addItem()" id="add">
+							<i class="fa fa-plus" ></i></button>
+					</span>
+					
+					<p class="h3">Notebook</p>
+                    <div class="input-group m-t-sm m-b-sm">
+                      <span class="input-group-addon input-sm"><i class="fa fa-search"></i></span>
+                      <input type="text" class="form-control input-sm" id="search-note" placeholder="search" ng-model="search.body">
+                    </div>
+                  </header>
+                 
+				 <section>
+                    <section>
+                      <section>
+                        <div class="padder"  >
+                          <!-- note list -->
+                          <ul id="note-items" class="list-group list-group-sp"></ul>
+                            <!-- templates -->
+							 <li ng-repeat="item in items | filter:search | filter:viewcountfilter" class="list-group-item hover"  >
+							 <div class="view" id="{{ item.id }}"  >
+							 <!-- ng-click="count = count + 1" ng-init="count=0"-->
+								<button class="destroy close hover-action" ng-click="delete1(item.id,0)">&times;</button>	
+								<div class="note-name" > 
+								<a  id="title" href="#!/doc/{{ item.id }}" ><strong> View {{ item.title }} {{ item.viewcount}}</strong> </a>
+								</div>
+								<div class="note-desc" ng-bind-html='item.body'> 	</div>
+								<span class="text-xs text-muted"> {{item.date | date:'yyyy-MM-dd HH:mm:ss '}}</span>
+							 </div>
+							 
+							 
+							 
+							 
+							 
+							 
+							 
+							 </li>
+							  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"   >
+  <div class="modal-dialog" >
+    <div class="modal-content"> 
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+	  
+       Are You want to delete {{  entitydel }} ?
+	   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="delete1('random',1)" >Delete</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+               
+                            <!-- / template  -->
+                          <!-- note list -->
+                          <p class="text-center">&nbsp;</p>
+                        </div>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+              </aside>
+              <!-- /.aside -->
+			   <!-- main content  -->
+		
+		
+              <aside id="note-detail">
+                
+		
+                  <section class="vbox">
+                    <header class="header bg-light lter bg-gradient b-b">
+						Created on,{{current.date | date:'yyyy-MM-dd HH:mm:ss '}}
+					
+					<button type="button" class="btn btn-default pull-right" ng-click="ckeditoroff()" >Save</button>  
+					<button type="button"  id="ckeditoronid"  class="btn btn-default pull-right" ng-click="ckeditoron()" >  Edit	</button> 
+	 
+                    </header>
+                    <section class="bg-light lter">
+                      <section class="hbox stretch">
+					  
+					  
+					  
+                        <aside>
+						
+                          <section class="vbox b-b">  
+						  <textarea ng-model="current.body"  style="width: 100%; height: 100px;"    value="{{current.body}}" disabled>
+									{{current.body}}
+                                </textarea  >
+                           
+                              <!--  <textarea type="text" class="ckeditor form-control scrollable"  name="bodyen" placeholder="Type your note here"  >
+								</textarea>
+-->
+
+                              <!--  <textarea ng-model="current.body" class="ckeditor form-control scrollable"    id=" " value="{{current.body}}">
+									{{current.body}}
+                                </textarea  >-->
+								
+								<div  id="bodyeditormaster">
+								<textarea   ck-editor ng-model="current.body" class="ckeditor form-control scrollable" id="bodyeditor" value="{{current.body}}" ></textarea>
+								</div>
+								
+								 
+								
+								  
+                            
+                          </section>
+                       
+				<!-------URl chng----->
+					   <div style="position:relative"> 
+							<div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}" ></div>
+						</div>
+				<!------- END URl chng----->
+		
+						</aside>
+                      </section>
+                    </section>
+                  </section>
+              
+              </aside>
+			  
+			  
+			  
+			  
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+      
+      
+     
+    
+   
+  

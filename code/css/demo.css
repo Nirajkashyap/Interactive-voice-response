@@ -1,0 +1,181 @@
+/** JSPLUMB ARTEFACTS **/
+._jsPlumb_connector {
+    z-index:1;
+}
+
+/** COMMON ELEMENT PROPERTIES **/
+.shape {
+    z-index:2;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    position:absolute;
+    cursor:pointer;
+    text-align:center;
+    color:#333;
+}
+
+/** SHAPES **/
+.shape1 {
+    float:left;
+    padding:2px 7px;
+    background-color:#b75252;
+    height:60px;
+    width:60px;
+}
+
+.shape2{
+    float:right;
+    padding:2px 7px;
+    color:white;
+    height:60px;
+    width:120px;
+}
+.shape3 {
+    
+    padding:25px 12px;
+    
+     
+}
+.shape4 {
+    float:left;
+    padding:2px 7px;
+    background-color:#999999;
+    height:60px;
+    width:60px;
+}
+
+.shape5 {
+    float:left;
+    padding:2px 7px;
+    background-color:#44ad44;
+    height:60px;
+    width:60px;
+}
+
+[data-shape=Rectangle] {
+    width:210px;
+    height:70px;
+    left:380px;
+    top:505px;
+    line-height: 70px;
+    background-image:url(rectangle.png);
+}
+
+[data-shape=Ellipse] {
+    width:128px;
+    height:128px;
+    left:250px;
+    top:300px;
+    line-height: 70px;
+    background-image:url(../img/m1.png);
+}
+
+[data-shape=Circle] {
+    width:150px;
+    height:150px;
+    left:100px;
+    top:60px;
+    line-height: 150px;
+    background-image:url(circle.png);
+}
+
+[data-shape=Triangle] {
+    width:150px;
+    height:150px;
+    line-height: 150px;
+    background-image:url(triangle.png);
+}
+
+._90[data-shape=Triangle] {
+    width:150px;
+    height:150px;
+    line-height: 150px;
+    background-image:url(triangle_90.png);
+}
+
+[data-shape=Diamond] {
+    width:150px;
+    height:150px;
+    left:550px;
+    top:150px;
+    line-height: 150px;
+    background-image:url(diamond.png);
+}
+
+[data-shape=m1] {
+    width:200px;
+    height:60px;
+   
+    line-height: 80px;
+     background-image:url(../img/sa/mo1.jpg);
+}
+[data-shape=m2] {
+    width:200px;
+    height:60px;
+     
+    line-height: 80px;
+     background-image:url(../img/sa/mo2.png);
+}
+[data-shape=m3] {
+    width:98px;
+    height:102px;
+       
+    line-height: 90px;
+   background-image:url(../img/sa/mo3.png);
+}
+[data-shape=m4] {
+   width:98px;
+    height:102px;
+      
+    line-height: 90px;
+    background-image:url(../img/sa/mo4.png);
+}
+[data-shape=m5] {
+     width:98px;
+    height:102px;
+     
+    line-height: 90px;
+    background-image:url(../img/sa/mo5.png);
+}
+[data-shape=m6] {
+     width:200px;
+    height:60px;
+     
+    line-height: 80px;
+     background-image:url(../img/sa/mo6.jpg);
+}
+[data-shape=m7] {
+    width:200px;
+    height:60px;
+     
+    line-height: 80px;
+     background-image:url(../img/sa/mo7.jpg);
+}
+[data-shape=m8] {
+    width:200px;
+    height:60px;
+     
+    line-height: 80px;
+     background-image:url(../img/sa/mo8.jpg);
+}
+[data-shape=m9] {
+    width:200px;
+    height:60px;
+     
+    line-height: 80px;
+     background-image:url(../img/sa/mo9.jpg);
+}
+[data-shape=m10] {
+    width:200px;
+    height:60px;
+     
+    line-height: 80px;
+     background-image:url(../img/sa/mo10.jpg);
+}
+[data-shape=m11] {
+     width:200px;
+    height:60px;
+     
+    line-height: 80px;
+     background-image:url(../img/sa/mo11.jpg);
+}
