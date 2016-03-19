@@ -187,6 +187,7 @@ connectionflag = 0 ;
 							$("#locutiontimeid").val("")
 							
 								comaprisonid = data.id
+								console.log('totalconfig', totalconfig);
 								
 													//$("#iemnuidtotalchoice").html(totalconfig.interactivemenu[i].choice.length)
 													$("#locutionid").val(totalconfig.interactivemenu[comaprisonid]["locution"])
